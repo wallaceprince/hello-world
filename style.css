@@ -5,3 +5,7 @@ body{
 h1{
     color:rgb(84, 32, 228)
 }
+
+svg {
+    width: 46px;
+}
