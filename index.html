@@ -1,25 +1,426 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8" />
-    <title>my hello world</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fretes e Mudanças</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- Conteúdo -->
-    <h1>my hello world
-        <svg fill="#000000" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1">
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-            <g id="SVGRepo_iconCarrier">
-                <path
-                    d="M6.33,18.45v8.59c0,.41,.34,.75,.75,.75h15.13c.41,0,.75-.34,.75-.75v-8.6c1.91-.75,3.27-2.6,3.27-4.77,0-2.83-2.3-5.13-5.13-5.13-.56,0-1.13,.1-1.67,.28-1.2-1.87-3.24-3.01-5.49-3.01s-4.09,1.02-5.31,2.75c-3.06-.27-5.56,2.14-5.56,5.11,0,2.17,1.36,4.02,3.27,4.77Zm1.5,7.84v-1.87h13.63v1.87H7.83Zm13.63-7.48v4.11H7.83v-4.11h13.63ZM8.19,10.05c.18,0,.36,.02,.56,.05,0,0,.01,0,.02,0,1.72,.33,2.97,1.83,2.97,3.57,0,.41,.34,.75,.75,.75s.75-.34,.75-.75c0-2.05-1.23-3.85-3.04-4.67,.94-1.07,2.29-1.7,3.74-1.7,1.91,0,3.64,1.07,4.5,2.79,.09,.18,.25,.31,.43,.38,.19,.06,.39,.05,.57-.04,.52-.26,1.09-.4,1.65-.4,2,0,3.63,1.63,3.63,3.63s-1.63,3.63-3.63,3.63H8.19c-2,0-3.63-1.63-3.63-3.63s1.63-3.63,3.63-3.63Z">
-                </path>
-            </g>
-        </svg>
-    </h1>
+
+    <!-- INÍCIO: Seção 1 (Cabeçalho & Hero) -->
+    <header class="hero-section">
+        <!-- Navbar Integrada -->
+        <nav class="hero-nav">
+            <div class="hero-nav-container">
+                <a href="#" class="brand-logo">
+                    <span class="logo-accent">Frete</span>e Mudanças
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#cobertura">Regiões</a></li>
+                </ul>
+                <a href="#contato" class="btn-nav-cta">Fale Conosco</a>
+            </div>
+        </nav>
+
+        <!-- Conteúdo Principal do Hero -->
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="badge-tag">Logística Rápida & Segura</span>
+                <h1 class="hero-title">
+                    Transporte inteligente e pontual para <span class="highlight">sua carga ou mudança.</span>
+                </h1>
+                <p class="hero-description">
+                    Conectamos sua necessidade aos melhores profissionais de frete da região. Cotação transparente em
+                    poucos minutos e acompanhamento em tempo real.
+                </p>
+
+                <!-- Ações de Conversão -->
+                <div class="hero-actions">
+                    <a href="#cotacao" class="btn-primary">Solicitar Cotação Grátis</a>
+                    <a href="https://wa.me/5532991985793" class="btn-secondary" target="_blank" rel="noopener">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z" />
+                        </svg>
+                        Chamar no WhatsApp
+                    </a>
+                </div>
+
+                <!-- Prova Social / Destaques -->
+                <div class="hero-trust-badges">
+                    <div class="badge-item">
+                        <strong>+10k</strong>
+                        <span>Fretes Realizados</span>
+                    </div>
+                    <div class="badge-divider"></div>
+                    <div class="badge-item">
+                        <strong>99.4%</strong>
+                        <span>Entregas no Prazo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- FIM: Seção 1 (Cabeçalho & Hero) -->
+
+    <!-- INÍCIO: Seção 2 (Serviços e Soluções) -->
+    <section id="servicos" class="servicos section-padding">
+        <div class="container">
+
+            <!-- Cabeçalho da Seção -->
+            <div class="section-header">
+                <span class="section-subtitle">Nossas Soluções</span>
+                <h2 class="section-title">Serviços Logísticos Sob Medida</h2>
+                <p class="section-description">
+                    Transporte de cargas e mudanças com foco absoluto em segurança, agilidade e total transparência.
+                </p>
+            </div>
+
+            <!-- Grid de Cards de Serviços -->
+            <div class="servicos-grid">
+
+                <!-- Card 1: Rastreabilidade & Transparência -->
+                <div class="servico-card">
+                    <div class="servico-icon-wrapper">
+                        <svg class="servico-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            <path d="m9 12 2 2 4-4" />
+                        </svg>
+                    </div>
+                    <h3 class="servico-titulo">Segurança & Rotina Transparente</h3>
+                    <p class="servico-descricao">
+                        Acompanhe em nosso Instagram o dia a dia da nossa frota, manuseio seguro de itens e entregas em
+                        tempo real.
+                    </p>
+                    <div class="servico-footer">
+                        <a href="https://instagram.com" target="_blank" rel="noopener" class="servico-link">
+                            Acompanhar no Instagram
+                            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Fretes e Mudanças -->
+                <div class="servico-card">
+                    <div class="servico-icon-wrapper icon-whatsapp">
+                        <svg class="servico-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="1" y="3" width="15" height="13" rx="2" />
+                            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+                            <circle cx="5.5" cy="18.5" r="2.5" />
+                            <circle cx="18.5" cy="18.5" r="2.5" />
+                        </svg>
+                    </div>
+                    <h3 class="servico-titulo">Fretes Rápidos & Mudanças</h3>
+                    <p class="servico-descricao">
+                        Atendemos desde pequenos fretes urbanos até mudanças residenciais e comerciais com embalagem e
+                        cuidado extremo.
+                    </p>
+                    <div class="servico-footer">
+                        <a href="https://wa.me/5532991985793" target="_blank" rel="noopener"
+                            class="servico-link link-whatsapp">
+                            Chamar no WhatsApp
+                            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Entregas Expresso / Cargas Dedicadas -->
+                <div class="servico-card">
+                    <div class="servico-icon-wrapper">
+                        <svg class="servico-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                        </svg>
+                    </div>
+                    <h3 class="servico-titulo">Entregas Urgentes & Dedicadas</h3>
+                    <p class="servico-descricao">
+                        Frota dedicada para urgências empresariais. Transporte expresso porta a porta com prazo de
+                        entrega garantido.
+                    </p>
+                    <div class="servico-footer">
+                        <a href="#contato" class="servico-link">
+                            Consultar Disponibilidade
+                            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- FIM: Seção 2 (Serviços e Soluções) -->
+
+
+    <!-- INÍCIO: Seção 3 (Slideshow de Destaques) -->
+    <!-- INÍCIO: Seção 3 (Galeria e Diferenciais em Carousel) -->
+    <section id="diferenciais" class="slideshow-section section-padding">
+        <div class="container">
+
+            <!-- Cabeçalho da Seção -->
+            <div class="section-header">
+                <span class="section-subtitle">Nossa Estrutura</span>
+                <h2 class="section-title">Agilidade e Cuidado em Cada Etapa</h2>
+                <p class="section-description">
+                    Conheça nossos padrões operacionais e a estrutura preparada para atender sua carga.
+                </p>
+            </div>
+
+            <!-- Container do Carrossel -->
+            <div class="carousel-wrapper">
+                <div class="slideshow-container">
+
+                    <!-- Slide 1 -->
+                    <div class="mySlides fade active">
+                        <div class="numbertext">1 / 3</div>
+                        <img src="./assets/imgs/frete-courrier.png" alt="Frota com Agilidade" class="slide-img">
+                        <div class="slide-caption">
+                            <h3>Agilidade no Transporte Urbano</h3>
+                            <p>Entregas rápidas com veículos adequados para o trânsito da cidade.</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="./assets/imgs/frete seguro.jfif" alt="Transporte Seguro" class="slide-img">
+                        <div class="slide-caption">
+                            <h3>Segurança e Acondicionamento</h3>
+                            <p>Sua carga protegida com amarração profissional e cuidado no manuseio.</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 3</div>
+                        <img src="./assets/imgs/FRETE-1.jpg" alt="Serviço Prático" class="slide-img">
+                        <div class="slide-caption">
+                            <h3>Processo Rápido e Sem Burocracia</h3>
+                            <p>Cotação instantânea e atendimento direto via WhatsApp.</p>
+                        </div>
+                    </div>
+
+                    <!-- Controles do Carrossel -->
+                    <button class="carousel-btn prev" id="prevBtn" aria-label="Slide anterior">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <path d="M15 18l-6-6 6-6" />
+                        </svg>
+                    </button>
+                    <button class="carousel-btn next" id="nextBtn" aria-label="Próximo slide">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <path d="M9 18l6-6-6-6" />
+                        </svg>
+                    </button>
+
+                </div>
+
+                <!-- Indicadores (Dots) -->
+                <div class="dots-container">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- FIM: Seção 3 (Galeria e Diferenciais em Carousel) -->
+    <!-- FIM: Seção 3 (Slideshow de Destaques) -->
+
+    <!-- INÍCIO: Seção 4 (Sobre Nós) -->
+    <section id="sobre" class="sobre-nos section-padding">
+        <div class="container">
+            <div class="sobre-grid">
+
+                <!-- Coluna de Conteúdo e Texto -->
+                <div class="sobre-content">
+                    <span class="section-subtitle">Quem Somos</span>
+                    <h2 class="sobre-titulo">Sua carga em mãos seguras, do início ao destino.</h2>
+                    <p class="sobre-descricao">
+                        Nascemos com a missão de simplificar o transporte de fretes e mudanças com eficiência,
+                        pontualidade e transparência. Combinamos profissionais experientes a um processo rigoroso de
+                        cuidado com cada item transportado.
+                    </p>
+
+                    <!-- Lista de Diferenciais Operacionais -->
+                    <ul class="sobre-features">
+                        <li class="feature-item">
+                            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            <span><strong>Frota Diversificada:</strong> Veículos adequados para pequenos fretes até
+                                grandes mudanças.</span>
+                        </li>
+                        <li class="feature-item">
+                            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            <span><strong>Embalagem & Acondicionamento:</strong> Proteção especial para móveis e
+                                eletrodomésticos sensíveis.</span>
+                        </li>
+                        <li class="feature-item">
+                            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            <span><strong>Atendimento Direto:</strong> Comunicação em tempo real via WhatsApp com a
+                                equipe de transporte.</span>
+                        </li>
+                    </ul>
+
+                    <!-- Botão de Ação -->
+                    <div class="sobre-actions">
+                        <a href="https://wa.me/5532991985793" class="btn btn-accent" target="_blank" rel="noopener">
+                            Falar com Nossos Especialistas
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Coluna Visual / Imagem com Badge Flutuante -->
+                <div class="sobre-media">
+                    <div class="sobre-img-wrapper">
+                        <img src="./assets/imgs/caminhao.jfif" alt="Frota e Caminhão de entregas" class="sobre-img">
+
+                        <!-- Card Flutuante de Autoridade (Social Proof) -->
+                        <div class="sobre-experience-badge">
+                            <strong class="badge-number">100%</strong>
+                            <span class="badge-text">Compromisso com o Prazo</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- FIM: Seção 4 (Sobre Nós) -->
+
+    <!-- INÍCIO: Seção 5 (Contato e Rodapé) -->
+    <footer id="contato" class="contato-section">
+        <div class="container">
+            <div class="contato-grid">
+
+                <!-- Formulário de Cotação de Frete -->
+                <div class="contato-form-card">
+                    <h2 class="form-title">Solicite uma Cotação Rápida</h2>
+                    <p class="form-subtitle">Preencha os dados e receba uma estimativa sem compromisso.</p>
+
+                    <form id="formContato" class="form-cotacao">
+                        <div class="form-group">
+                            <label for="nome">Nome Completo</label>
+                            <input type="text" id="nome" name="nome" placeholder="Ex: João Silva" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="telefone">WhatsApp / Telefone</label>
+                                <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="tipoServico">Tipo de Serviço</label>
+                                <select id="tipoServico" name="tipoServico" required>
+                                    <option value="" disabled selected>Selecione...</option>
+                                    <option value="mudanca">Mudança Residencial</option>
+                                    <option value="frete-pequeno">Frete Rápido / Carga Pequena</option>
+                                    <option value="empresa">Transporte Empresarial / B2B</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="origem">Cidade de Origem</label>
+                                <input type="text" id="origem" name="origem" placeholder="Ex: São Paulo, SP" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="destino">Cidade de Destino</label>
+                                <input type="text" id="destino" name="destino" placeholder="Ex: Campinas, SP" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensagem">Detalhes do Frete (Opcional)</label>
+                            <textarea id="mensagem" name="mensagem"
+                                placeholder="Descreva os itens ou particularidades da entrega..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-accent btn-block">Calcular meu Frete</button>
+                    </form>
+                </div>
+
+                <!-- Links de Contato e Redes Sociais -->
+                <div class="contato-info">
+                    <div class="brand-info">
+                        <a href="#" class="brand-logo footer-logo"><span class="logo-accent">LOG</span>FRETE</a>
+                        <p class="footer-desc">Soluções em transporte e logística com cobertura regional e atendimento
+                            humanizado.</p>
+                    </div>
+
+                    <div class="info-block">
+                        <h3>Atendimento Direto</h3>
+                        <ul class="contato-list">
+                            <li>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                                </svg>
+                                <span>(00) 99999-9999</span>
+                            </li>
+                            <li>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                    <polyline points="22,6 12,13 2,6" />
+                                </svg>
+                                <a href="mailto:contato@logfrete.com.br">contato@logfrete.com.br</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="info-block">
+                        <h3>Siga Nossas Redes</h3>
+                        <div class="social-links">
+                            <a href="https://instagram.com" target="_blank" rel="noopener"
+                                class="social-btn">Instagram</a>
+                            <a href="https://facebook.com" target="_blank" rel="noopener"
+                                class="social-btn">Facebook</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 LOGFRETE. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- FIM: Seção 5 (Contato e Rodapé) -->
+
+    <!-- Scripts do Sistema -->
+    <script src="main.js"></script>
 </body>
 
 </html>
