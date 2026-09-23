@@ -159,7 +159,7 @@ video {
 .section-header {
   text-align: center;
   max-width: 650px;
-  margin: 0 auto 3.5rem auto;
+  margin: 0 auto 3.5rem auto; 
 }
 
 .section-subtitle {
@@ -177,12 +177,14 @@ video {
 
 .section-title {
   font-size: 2.25rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1rem; 
 }
 
 .section-description {
   font-size: 1.125rem;
   color: var(--color-text-muted);
+  padding-inline: 64px;
+  text-align: justify;
 }
 
 /* 8. Componentes Reutilizáveis (Botões Padronizados) */
@@ -282,7 +284,7 @@ video {
   width: 100%;
   min-height: 100dvh;
   background: linear-gradient(135deg, rgba(10, 25, 47, 0.82) 0%, rgba(15, 23, 42, 0.70) 100%),
-    url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1600') center/cover no-repeat;
+    url('./assets/imgs/caminhao\ perfil.jpg') center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -514,6 +516,212 @@ video {
 }
 
 /* FIM: SEÇÃO 1 - CABEÇALHO & HERO */
+
+/* ==========================================
+   INÍCIO: SEÇÃO Cotação rapida
+   ========================================== */
+  
+/* Container Principal da Seção */
+.frete-calc-section {
+    width: 100%;
+    padding: 60px 20px;
+    background-color: #f8fafc;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.calc-container {
+    width: 100%;
+    max-width: 1000px; /* Largura expandida para aproveitar melhor a tela */
+    background: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+}
+
+/* Cabeçalho da Cotação */
+.calc-header {
+    margin-bottom: 10px;
+    text-align: left;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 15px;
+}
+
+.calc-header h2 {
+    font-size: 2rem;
+    color: #1e3a8a; /* Azul Principal */
+    font-weight: 800;
+    margin: 0 0 8px 0;
+}
+
+.calc-header p {
+    color: #475569;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Grid Interno: Lado a Lado no Desktop */
+.calc-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 30px;
+}
+
+.calc-header {
+    grid-column: 1 / -1; /* O cabeçalho ocupa toda a largura */
+}
+
+/* Formulário (Coluna da Esquerda) */
+.calc-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 6px;
+}
+
+.input-wrapper input,
+.input-wrapper select {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 0.95rem;
+    color: #0f172a;
+    background-color: #ffffff;
+    border: 1.5px solid #000000;
+    border-radius: 8px;
+    outline: none;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+}
+
+.input-wrapper input:focus,
+.input-wrapper select:focus {
+    border-color: #1e3a8a;
+    box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.15);
+}
+
+/* Painel de Resultado (Coluna da Direita) */
+.resultado-card {
+    background: #eff6ff; /* Tom de azul bem leve */
+    border: 2px solid #000000;
+    border-radius: 12px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.resultado-info, 
+.resultado-preco {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 14px 18px;
+    border: 1.5px solid #000000;
+    border-radius: 8px;
+}
+
+.info-label {
+    font-size: 0.9rem;
+    color: #334155;
+    font-weight: 600;
+}
+
+.info-value {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.preco-tag {
+    color: #1e3a8a;
+    font-weight: 800;
+}
+
+.preco-tag .moeda {
+    font-size: 1.1rem;
+    margin-right: 2px;
+}
+
+.preco-tag .valor {
+    font-size: 1.8rem;
+}
+
+/* Botão WhatsApp */
+.btn-whats-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #25d366;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 16px;
+    border: 1.5px solid #000000;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 0 #000000;
+}
+
+.btn-whats-action:hover:not(.disabled) {
+    background-color: #20ba5a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 #000000;
+}
+
+.btn-whats-action:active:not(.disabled) {
+    transform: translateY(0);
+    box-shadow: 0 2px 0 #000000;
+}
+
+/* Estado Desabilitado do Botão */
+.btn-whats-action.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    filter: grayscale(1);
+    box-shadow: none;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE (MOBILE E TABLETS)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .calc-container {
+        grid-template-columns: 1fr; /* Volta a ser 1 coluna em telas menores */
+        padding: 24px;
+        gap: 20px;
+    }
+
+    .calc-header h2 {
+        font-size: 1.6rem;
+    }
+
+    .resultado-card {
+        padding: 20px;
+    }
+
+    .resultado-info, 
+    .resultado-preco {
+        flex-direction: row;
+        padding: 12px;
+    }
+}
+
+/* FIM: SEÇÃO Cotação rapida */
 
 /* ==========================================
    INÍCIO: SEÇÃO 2 - SERVIÇOS E SOLUÇÕES
@@ -1176,3 +1384,60 @@ video {
 }
 
 /* FIM: SEÇÃO 5 - CONTATO & RODAPÉ */
+
+/* ==========================================================================
+   BOTÃO FLUTUANTE VOLTAR AO TOPO (TRANSLÚCIDO)
+   ========================================================================== */
+
+/* Habilita a rolagem suave em toda a página */
+html {
+    scroll-behavior: smooth;
+}
+
+.btn-topo-flutuante {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 48px;
+    height: 48px;
+    background-color: rgba(30, 58, 138, 0.45); /* Azul translúcido */
+    color: #ffffff;
+    border: 2px solid rgba(0, 0, 0, 0.25); /* Contorno levemente translúcido */
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    
+    /* Efeitos de transição */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    backdrop-filter: blur(6px); /* Efeito de vidro fosco */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Estado visível ao rolar a página */
+.btn-topo-flutuante.visivel {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Efeito ao passar o mouse (Hover) */
+.btn-topo-flutuante:hover {
+    background-color: rgba(30, 58, 138, 0.85); /* Fica mais opaco ao interagir */
+    border-color: #000000;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* Ajustes para telas móveis */
+@media (max-width: 480px) {
+    .btn-topo-flutuante {
+        bottom: 15px;
+        right: 15px;
+        width: 42px;
+        height: 42px;
+    }
+}

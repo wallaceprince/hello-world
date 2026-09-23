@@ -1,6 +1,7 @@
 <div align="center">
 
-  # 🚚 LOGFRETE — Landing Page & Plataforma de Cotação
+
+  # 🚚 LOGFRETE — Plataforma de Cotação
 
   **Uma solução web de alta performance para transporte, logística e cotações instantâneas.**
 
@@ -78,4 +79,17 @@ O **LOGFRETE** é uma Landing Page moderna desenvolvida para otimizar a convers�
 > └── **README.md** *(Documentação do projeto)*  
 
 ---
+ 
+
+ ## Novas Funcionalidades
+
+ - 1 : Dado oum endereço, calcular a quilometragegm:
+ - 2 : alterei as imagens pra deixar no ton do site e ficar mais armonico.
+ - 3 : Adicionar seção de cotação rapida, abaixo do hero.
+ - 4 :remover regioes do menu.
+ - 5 :altera o texto do botão fale conosco para cotaçao completa.
+ - 6 :colocar um botao de rolagem de tela.
+ - 7 : secacao nossas solucoes: alterar servicos para nossas solucoes do item do menu.
+ - 8 : seçao nossas soluçoes adicionar grid das regioes.
+
  

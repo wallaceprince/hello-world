@@ -19,11 +19,10 @@
                     <span class="logo-accent">Frete</span>e Mudanças
                 </a>
                 <ul class="nav-links">
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#sobre">Sobre Nós</a></li>
-                    <li><a href="#cobertura">Regiões</a></li>
+                    <li><a href="#nossas-solucoes">Nossas Soluções</a></li>
+                    <li><a href="#sobre">Quem Somos</a></li>
                 </ul>
-                <a href="#contato" class="btn-nav-cta">Fale Conosco</a>
+                <a href="#contato" class="btn-nav-cta">COTAÇÃO COMPLETA</a>
             </div>
         </nav>
 
@@ -41,7 +40,7 @@
 
                 <!-- Ações de Conversão -->
                 <div class="hero-actions">
-                    <a href="#cotacao" class="btn-primary">Solicitar Cotação Grátis</a>
+                    <a href="#cotacao" class="btn-primary">Solicita Cotação Rápida</a>
                     <a href="https://wa.me/5532991985793" class="btn-secondary" target="_blank" rel="noopener">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                             <path
@@ -50,6 +49,7 @@
                         Chamar no WhatsApp
                     </a>
                 </div>
+
 
                 <!-- Prova Social / Destaques -->
                 <div class="hero-trust-badges">
@@ -68,12 +68,88 @@
     </header>
     <!-- FIM: Seção 1 (Cabeçalho & Hero) -->
 
-    <!-- INÍCIO: Seção 2 (Serviços e Soluções) -->
+    <!-- inicio da cotaçao rapida -->
+    <!-- Seção 2: Cotação Rápida -->
+    <section id="cotacao" class="frete-calc-section">
+        <div class="calc-container">
+            <header class="calc-header">
+                <h2>Cotação Rápida</h2>
+                <p>Preencha os endereços para ver a estimativa em tempo real.</p>
+            </header>
+
+            <form id="freteForm" class="calc-form" onsubmit="return false;">
+                <!-- Origem -->
+                <div class="input-group">
+                    <label for="origem">Endereço de Origem (Saída)</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="origem" placeholder="Ex: Av. Rio Branco, Juiz de Fora" required
+                            autocomplete="off">
+                    </div>
+                </div>
+
+                <!-- Destino -->
+                <div class="input-group">
+                    <label for="destino">Endereço de Destino (Entrega)</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="destino" placeholder="Ex: Centro, Juiz de Fora" required
+                            autocomplete="off">
+                    </div>
+                </div>
+
+                <!-- Tipo de Veículo -->
+                <div class="input-group">
+                    <label for="tipoVeiculo">Veículo Desejado</label>
+                    <div class="input-wrapper">
+                        <select id="tipoVeiculo">
+                            <option value="5">Van / Utilitário (R$ 5,00/km)</option>
+                            <option value="8">Caminhão Básico (R$ 8,00/km)</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+
+            <!-- Painel de Resultado -->
+            <div id="resultadoCalc" class="resultado-card" aria-live="polite">
+                <div class="resultado-info">
+                    <span class="info-label">Distância Estimada</span>
+                    <span id="distanciaTexto" class="info-value">0,0 km</span>
+                </div>
+
+                <div class="resultado-preco">
+                    <span class="info-label">Valor Estimado</span>
+                    <div class="preco-tag">
+                        <span class="moeda">R$</span>
+                        <span id="valorTotal" class="valor">0,00</span>
+                    </div>
+                </div>
+
+                <a id="btnWhatsApp" href="https://wa.me/5532991985793" target="_blank" rel="noopener noreferrer"
+                    class="btn-whats-action disabled">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path
+                            d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z" />
+                    </svg>
+                    <span>Enviar Pedido pelo WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- FIM da cotaçao rapida -->
+
+    <!-- Seção 2 (Serviços e Soluções) -->
     <section id="servicos" class="servicos section-padding">
         <div class="container">
 
+            <!-- Script da API do Google Maps (Substitua SUA_CHAVE_API pela sua chave do Google Cloud) -->
+            <script src="https://maps.googleapis.com/maps/api/js?key=SUA_CHAVE_API&libraries=places"></script>
+
+
+
+
+            <!-- INÍCIO: Seção 2 (Serviços e Soluções) -->
+
             <!-- Cabeçalho da Seção -->
-            <div class="section-header">
+            <div id="nossas-solucoes" class="section-header">
                 <span class="section-subtitle">Nossas Soluções</span>
                 <h2 class="section-title">Serviços Logísticos Sob Medida</h2>
                 <p class="section-description">
@@ -137,6 +213,7 @@
                     </div>
                 </div>
 
+
                 <!-- Card 3: Entregas Expresso / Cargas Dedicadas -->
                 <div class="servico-card">
                     <div class="servico-icon-wrapper">
@@ -167,8 +244,6 @@
     </section>
     <!-- FIM: Seção 2 (Serviços e Soluções) -->
 
-
-    <!-- INÍCIO: Seção 3 (Slideshow de Destaques) -->
     <!-- INÍCIO: Seção 3 (Galeria e Diferenciais em Carousel) -->
     <section id="diferenciais" class="slideshow-section section-padding">
         <div class="container">
@@ -176,7 +251,7 @@
             <!-- Cabeçalho da Seção -->
             <div class="section-header">
                 <span class="section-subtitle">Nossa Estrutura</span>
-                <h2 class="section-title">Agilidade e Cuidado em Cada Etapa</h2>
+                <h2 class="section-title">Agilidade e Cuidado <br>em Cada Etapa</h2>
                 <p class="section-description">
                     Conheça nossos padrões operacionais e a estrutura preparada para atender sua carga.
                 </p>
@@ -189,7 +264,8 @@
                     <!-- Slide 1 -->
                     <div class="mySlides fade active">
                         <div class="numbertext">1 / 3</div>
-                        <img src="./assets/imgs/frete-courrier.png" alt="Frota com Agilidade" class="slide-img">
+                        <img src="./assets/imgs/caminhao branco azul pequeno.jpg" alt="Frota com Agilidade"
+                            class="slide-img">
                         <div class="slide-caption">
                             <h3>Agilidade no Transporte Urbano</h3>
                             <p>Entregas rápidas com veículos adequados para o trânsito da cidade.</p>
@@ -199,7 +275,7 @@
                     <!-- Slide 2 -->
                     <div class="mySlides fade">
                         <div class="numbertext">2 / 3</div>
-                        <img src="./assets/imgs/frete seguro.jfif" alt="Transporte Seguro" class="slide-img">
+                        <img src="./assets/imgs/caminhao menor.jpg" alt="Transporte Seguro" class="slide-img">
                         <div class="slide-caption">
                             <h3>Segurança e Acondicionamento</h3>
                             <p>Sua carga protegida com amarração profissional e cuidado no manuseio.</p>
@@ -209,7 +285,7 @@
                     <!-- Slide 3 -->
                     <div class="mySlides fade">
                         <div class="numbertext">3 / 3</div>
-                        <img src="./assets/imgs/FRETE-1.jpg" alt="Serviço Prático" class="slide-img">
+                        <img src="./assets/imgs/van pequena.jfif" alt="Serviço Prático" class="slide-img">
                         <div class="slide-caption">
                             <h3>Processo Rápido e Sem Burocracia</h3>
                             <p>Cotação instantânea e atendimento direto via WhatsApp.</p>
@@ -243,7 +319,6 @@
         </div>
     </section>
     <!-- FIM: Seção 3 (Galeria e Diferenciais em Carousel) -->
-    <!-- FIM: Seção 3 (Slideshow de Destaques) -->
 
     <!-- INÍCIO: Seção 4 (Sobre Nós) -->
     <section id="sobre" class="sobre-nos section-padding">
@@ -299,7 +374,7 @@
                 <!-- Coluna Visual / Imagem com Badge Flutuante -->
                 <div class="sobre-media">
                     <div class="sobre-img-wrapper">
-                        <img src="./assets/imgs/caminhao.jfif" alt="Frota e Caminhão de entregas" class="sobre-img">
+                        <img src="./assets/imgs/point azul.jfif" alt="Frota e Caminhão de entregas" class="sobre-img">
 
                         <!-- Card Flutuante de Autoridade (Social Proof) -->
                         <div class="sobre-experience-badge">
@@ -321,7 +396,7 @@
 
                 <!-- Formulário de Cotação de Frete -->
                 <div class="contato-form-card">
-                    <h2 class="form-title">Solicite uma Cotação Rápida</h2>
+                    <h2 class="form-title"> Cotação completa </h2>
                     <p class="form-subtitle">Preencha os dados e receba uma estimativa sem compromisso.</p>
 
                     <form id="formContato" class="form-cotacao">
@@ -384,7 +459,7 @@
                                     <path
                                         d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                                 </svg>
-                                <span>(00) 99999-9999</span>
+                                <span>(32) 99198-5793</span>
                             </li>
                             <li>
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -393,7 +468,7 @@
                                         d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                                     <polyline points="22,6 12,13 2,6" />
                                 </svg>
-                                <a href="mailto:contato@logfrete.com.br">contato@logfrete.com.br</a>
+                                <a href="mailto:contato@logfrete.com.br">empresarialwl123@gmail.com</a>
                             </li>
                         </ul>
                     </div>
@@ -417,6 +492,14 @@
             </div>
         </div>
     </footer>
+ 
+
+            <!-- Botão Voltar ao Topo -->
+<button id="btnTopo" class="btn-topo-flutuante" aria-label="Voltar ao topo da página">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 15l-6-6-6 6"/>
+    </svg>
+</button>
     <!-- FIM: Seção 5 (Contato e Rodapé) -->
 
     <!-- Scripts do Sistema -->
@@ -424,3 +507,5 @@
 </body>
 
 </html>
+
+

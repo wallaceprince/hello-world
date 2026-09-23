@@ -16,6 +16,65 @@ document.addEventListener('DOMContentLoaded', () => {
 // FIM: MÓDULO - ANIMAÇÃO DE ENTRADA (HERO)
 // ==========================================
 
+
+//Inicio - Cotacao rapida
+
+document.addEventListener('DOMContentLoaded', () => {
+    const origemInput = document.getElementById('origem');
+    const destinoInput = document.getElementById('destino');
+    const veiculoSelect = document.getElementById('tipoVeiculo');
+    
+    const distanciaTexto = document.getElementById('distanciaTexto');
+    const valorTotalTexto = document.getElementById('valorTotal');
+    const btnWhatsApp = document.getElementById('btnWhatsApp');
+
+    function calcularSimulacao() {
+        const origem = origemInput.value.trim();
+        const destino = destinoInput.value.trim();
+        const valorPorKm = parseFloat(veiculoSelect.value);
+
+        // Validação mínima para simular o cálculo
+        if (origem.length > 3 && destino.length > 3) {
+            // Exemplo de distância calculada (Substitua pela resposta do Google Distance Matrix API)
+            const distanciaEstimadaKm = 15.5; 
+            const valorCalculado = distanciaEstimadaKm * valorPorKm;
+
+            // Atualiza Interface
+            distanciaTexto.textContent = `${distanciaEstimadaKm.toFixed(1).replace('.', ',')} km`;
+            valorTotalTexto.textContent = valorCalculado.toLocaleString('pt-BR', {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2
+            });
+
+            // Habilita Botão e Atualiza Link
+            btnWhatsApp.classList.remove('disabled');
+            
+            const mensagem = encodeURIComponent(
+                `Olá! Quero solicitar um frete:\n` +
+                `📍 Origem: ${origem}\n` +
+                `🏁 Destino: ${destino}\n` +
+                `📏 Distância: ${distanciaEstimadaKm} km\n` +
+                `💰 Estimativa: R$ ${valorCalculado.toFixed(2)}`
+            );
+            
+            btnWhatsApp.href = `https://wa.me/5532991985793?text=${mensagem}`;
+        } else {
+            btnWhatsApp.classList.add('disabled');
+            distanciaTexto.textContent = '0,0 km';
+            valorTotalTexto.textContent = '0,00';
+        }
+    }
+
+    // Ouvintes de evento para cálculo instantâneo
+    origemInput.addEventListener('input', calcularSimulacao);
+    destinoInput.addEventListener('input', calcularSimulacao);
+    veiculoSelect.addEventListener('change', calcularSimulacao);
+});
+
+
+//FIM - Cotacao rapida
+
+
 // INÍCIO: Módulo - Carrossel / Slideshow
 document.addEventListener("DOMContentLoaded", () => {
     let slideIndex = 0;
@@ -59,6 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
 // FIM: Módulo - Carrossel / Slideshow
 
 // INÍCIO: Módulo - Envio do Formulário de Cotação
@@ -91,3 +151,29 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 // FIM: Módulo - Envio do Formulário de Cotação
+
+
+// ==========================================================================
+// FUNCIONALIDADE DO BOTÃO VOLTAR AO TOPO
+// ==========================================================================
+document.addEventListener('DOMContentLoaded', () => {
+    const btnTopo = document.getElementById('btnTopo');
+
+    // Exibe ou oculta o botão conforme a rolagem da página
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            btnTopo.classList.add('visivel');
+        } else {
+            btnTopo.classList.remove('visivel');
+        }
+    });
+
+    // Ação de rolagem suave até o topo ao clicar
+    btnTopo.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+});
+
