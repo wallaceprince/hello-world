@@ -2,6 +2,8 @@
 
 
   # 🚚 LOGFRETE — Plataforma de Cotação
+  
+  - desenvolvedor:
 
   **Uma solução web de alta performance para transporte, logística e cotações instantâneas.**
 
