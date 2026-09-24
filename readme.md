@@ -3,8 +3,9 @@
 
   # 🚚 LOGFRETE — Plataforma de Cotação
 
+: Developer
 
-
+Wallace 
 Yago
 
   **Uma solução web de alta performance para transporte, logística e cotações instantâneas.**
